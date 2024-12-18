@@ -1,0 +1,121 @@
+/* Definice barev */
+:root {
+    --dark-green: #2d3a26; /* tmavá zelená */
+    --olive-green: #3d5c3a; /* olivová zelená */
+    --army-green: #6a7d34; /* vojenská zelená */
+    --light-olive: #9a9e6f; /* světlejší olivová */
+    --khaki: #b0b57e; /* khaki */
+}
+
+/* Základní styl pro tělo stránky */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--khaki);
+    color: var(--dark-green);
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;  /* Vždy zobrazovat svislý scrollbar */
+    min-height: 100vh;    /* Aby tělo stránky mělo minimální výšku pro zajištění celkové výšky */
+    display: flex;
+    flex-direction: column; /* Flexbox pro vertikální zarovnání */
+}
+
+/* Zajištění, že obsah stránky zabere veškerý dostupný prostor */
+.container {
+    flex: 1; /* Flexibilní prostor pro obsah stránky */
+    padding: 3rem 1rem;
+    max-width: 1200px; /* Maximální šířka kontejneru */
+    margin: 0 auto;    /* Centrování kontejneru */
+}
+
+/* Map style */
+#map {
+    height: 500px; /* Zajistí dostatečně velkou výšku pro mapu */
+    width: 100%;   /* Šířka mapy se přizpůsobí šířce kontejneru */
+    border: 2px solid var(--army-green);
+    border-radius: 8px;
+    margin-top: 20px; /* Aby byla mapa oddělena od ostatního obsahu */
+}
+
+/* Styl pro navigační menu */
+.navbar {
+    background-color: var(--olive-green);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav {
+    margin-left: 0; /* Zajistí, že položky budou na začátku, bez odsazení */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--army-green);
+}
+
+/* Zajištění, že navigace bude na levé straně */
+.navbar .navbar-nav.me-auto {
+    margin-left: 0;
+}
+
+/* Tlačítka */
+.btn {
+    background-color: var(--army-green);
+    color: white;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--olive-green);
+    color: white;
+}
+
+/* Styl pro jednotlivé sekce */
+h1, h2 {
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.card {
+    background-color: var(--light-olive);
+    border: 1px solid var(--olive-green);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formuláře */
+.form-control {
+    border: 1px solid var(--olive-green);
+    background-color: white;
+    color: var(--dark-green);
+}
+
+.form-control:focus {
+    border-color: var(--army-green);
+    box-shadow: 0 0 0 0.2rem rgba(106, 125, 52, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--olive-green);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Zajistí, že footer bude vždy na spodu */
+}
+
+/* Další drobné úpravy */
+.navbar-toggler-icon {
+    background-color: white;
+}
